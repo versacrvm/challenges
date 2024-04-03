@@ -31,6 +31,15 @@ ul {
   width: max-content;
 }
 
+ul .user .bio {
+  display: none;
+}
+
+ul. .user .bio {
+  text-align: left;
+  color: darkslategray;
+}
+
 li {
   margin: 8px 0;
 }
