@@ -13,15 +13,15 @@ Let's fix this mess!
   </head>
   <!--someone forgot to wrap the content of our webpage with an HTML element,
 	which one was it again?-->
-  <div>
+  <body>
     <div>
-      <div>Jane Doe</div>
+      <h1>Jane Doe</h1>
       <!--Which elements could be used to link to parts of the webpage,
 		which appear below?-->
       <div id="nav">
-        <div>About Me</div>
-        <div>Contact</div>
-        <div>Skillset</div>
+        <a href="#about-me">About Me</a>
+        <a href="#contact">Contact</a>
+        <a href="#skills">Skillset</a>
       </div>
     </div>
     <!--Looks like the following part is the central content of our webpage.-->
@@ -39,33 +39,33 @@ Let's fix this mess!
             src="https://source.unsplash.com/random/400x300?fruit"
             alt="a random picture"
           />
-          <div>
+          <p>
             A random picture, because I would like to maintain my privacy and
             let my code speak for me, instead of images.
-          </div>
+          </p>
         </div>
       </div>
 
       <div id="contact">
         <div>Contact</div>
         <!--When clicking on these element, nothing happens! But I want to be redirected to the other websites. Why is it not working?-->
-        <div href="https://github.com/spiced-academy">GitHub</div>
-        <div href="https://de.linkedin.com/">LinkedIn</div>
-        <div href="https://codesandbox.io/">CodeSandbox</div>
+        <a href="https://github.com/spiced-academy">GitHub</a>
+        <a href="https://de.linkedin.com/">LinkedIn</a>
+        <a href="https://codesandbox.io/">CodeSandbox</a>
       </div>
 
       <div id="skills">
         <div>Skillset</div>
         <!--This part could use some bulletpoint to be more structured-->
-        <div>
-          <div>HTML</div>
-          <div>CSS</div>
-          <div>JavaScript</div>
-          <div>React</div>
-          <div>Painting rainbows</div>
-          <div>Party</div>
-        </div>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+          <li>React</li>
+          <li>Painting rainbows</li>
+          <li>Party</li>
+        </ul>
       </div>
     </div>
-  </div>
+  </body>
 </html>
