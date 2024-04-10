@@ -10,7 +10,11 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+const title = "Post";
+const text = "Content of the post";
+const numberOfLikes = 200 + 1;
+const nameUser = "Fabian";
+const isReported = true;
 // --^-- write your code here --^--
 
 /*
@@ -18,5 +22,9 @@ console.clear();
 */
 
 // --v-- write your code here --v--
-
+console.log(title);
+console.log(text);
+console.log(numberOfLikes);
+console.log(nameUser);
+console.log(isReported);
 // --^-- write your code here --^--
