@@ -1,4 +1,4 @@
-@import './global.css';
+@import "./global.css";
 
 body {
   font-family: system-ui;
@@ -62,4 +62,8 @@ textarea {
 
 .success {
   color: green;
+}
+
+.hidden {
+  display: none;
 }
