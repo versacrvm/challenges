@@ -11,10 +11,15 @@ Convert the input value to lowercase when clicking a second button
 Hint: Access the value by using `.value` on the input element
 
 */
+const lowercaseButton = document.querySelector('[data-js="button-lowercase"]');
 
 const input = document.querySelector('[data-js="first-input"]');
 const uppercaseButton = document.querySelector('[data-js="button-uppercase"]');
 
 uppercaseButton.addEventListener("click", () => {
   input.value = input.value.toUpperCase();
+});
+
+lowercaseButton.addEventListener("click", () => {
+  input.value = input.value.toLowerCase();
 });
