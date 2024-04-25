@@ -2,6 +2,7 @@ import { Wheel } from "./components/Wheel/Wheel.js";
 import { SpinButton } from "./components/SpinButton/SpinButton.js";
 import { Machine } from "./components/Machine/Machine.js";
 import { Result } from "./components/Result/Result.js";
+import { getMaxCount } from "./utils/symbols.js";
 
 console.clear();
 
@@ -64,7 +65,14 @@ spinButton.addEventListener("click", async () => {
    */
 
   spinButton.disabled = false;
+  const valuesWheel = await Promise.all([
+    wheel1.spin(),
+    wheel2.spin(),
+    wheel3.spin(),
+  ]);
 });
+
+async function scoreCount() {}
 
 /**
  * Bonus hint:
