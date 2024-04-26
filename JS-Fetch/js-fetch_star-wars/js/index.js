@@ -34,13 +34,30 @@ const EXAMPLE_DATA = {
 };
 
 // Create dom element for a card and append it to the root
-const firstCard = Card(EXAMPLE_DATA);
-renderElement(firstCard);
+//const firstCard = Card(EXAMPLE_DATA);
+renderElement(Card(EXAMPLE_DATA));
 
-fetchDataAndRender();
+const fetchedCharacters = await fetchDataAndRender();
+console.log(fetchedCharacters.results);
+fetchedCharacters.results.forEach((character) =>
+  renderElement(Card(character))
+);
 
 // --v-- your code below this line --v--
 
-function fetchDataAndRender() {
-  fetch(); // ?
+async function fetchDataAndRender() {
+  try {
+    const response = await fetch("https://swapi.py4e.com/api/people");
+
+    if (response.ok) {
+      const data = await response.json();
+      return data;
+    } else {
+      console.error("Bad Response");
+    }
+  } catch (error) {
+    console.error("An Error occurred");
+  }
 }
+
+//https://swapi.py4e.com/api/people
