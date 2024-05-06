@@ -1,5 +1,25 @@
 import "./App.css";
 
 export default function App() {
-  return <h1>Replace me with your component!</h1>;
+  function handleButton() {
+    console.log("hello hello hello");
+  }
+  return (
+    <ButtonComponent
+      color={"red"}
+      disabled={false}
+      text={"Click Me"}
+      onClick={handleButton}
+    />
+  );
+}
+
+function ButtonComponent({ color, disabled, text, onClick }) {
+  return (
+    <>
+      <button onClick={onClick} style={{ color: color }} disabled={disabled}>
+        {text}
+      </button>
+    </>
+  );
 }
