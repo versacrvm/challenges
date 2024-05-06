@@ -3,18 +3,18 @@ import "./App.css";
 export default function App() {
   return (
     <main>
-      <Button />
-      <Button />
-      <Button />
-      <Button />
+      <Button>hello</Button>
+      <Button>hi</Button>
+      <Button>hey</Button>
+      <Button>hy</Button>
     </main>
   );
 }
 
-function Button() {
+function Button({ children }) {
   return (
     <button className="button" type="button">
-      Click me!
+      {children}
     </button>
   );
 }
