@@ -1,12 +1,14 @@
 import "./Form.css";
+import { uid } from "uid";
 
 export default function Form({ onAddAnimal }) {
   function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
     const data = Object.fromEntries(formData);
+    const newAnimal = { id: uid(), ...data };
 
-    onAddAnimal(data);
+    onAddAnimal(newAnimal);
 
     event.target.reset();
     event.target.elements.name.focus();
