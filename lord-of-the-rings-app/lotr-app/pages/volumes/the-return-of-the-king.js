@@ -17,6 +17,7 @@ export default function trotk() {
           </li>
         ))}
       </ul>
+      <Image src={volume.cover} width={140} height={230} />
     </>
   );
 }
