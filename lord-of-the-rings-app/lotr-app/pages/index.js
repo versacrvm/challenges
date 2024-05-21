@@ -4,6 +4,8 @@ import Head from "next/head";
 import Link from "next/link";
 import { volumes } from "./lib/data.js";
 import { useRouter } from "next/router.js";
+import Button from "../components/Button.style.js";
+import P from "../components/P.style.js";
 
 export default function Volumes() {
   console.log({ volumes });
@@ -20,7 +22,7 @@ export default function Volumes() {
       </Head>
       <main>
         <h1>Lord of the Rings</h1>
-        <p>{introduction}</p>
+        <P>{introduction}</P>
         <h2>All Volumes:</h2>
         <ul>
           {volumes.map((volume, index) => (
@@ -29,9 +31,9 @@ export default function Volumes() {
             </li>
           ))}
         </ul>
-        <button type="button" onClick={() => getRandomElement(volumes)}>
+        <Button type="button" onClick={() => getRandomElement(volumes)}>
           Random Volume
-        </button>
+        </Button>
       </main>
     </>
   );
