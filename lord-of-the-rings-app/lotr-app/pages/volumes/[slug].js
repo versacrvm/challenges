@@ -4,6 +4,8 @@ import Link from "next/link.js";
 import Image from "next/image.js";
 import { useRouter } from "next/router.js";
 
+// this used to be the individual components which are now dynamic
+
 export default function VolumeDetail() {
   const router = useRouter();
   const { slug } = router.query;

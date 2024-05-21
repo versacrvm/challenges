@@ -12,6 +12,7 @@ export default function Volumes() {
     const randomSlug = array[Math.floor(Math.random() * array.length)].slug;
     router.push(`/volumes/${randomSlug}`);
   }
+
   return (
     <>
       <Head>
