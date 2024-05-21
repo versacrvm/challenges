@@ -14,10 +14,6 @@ export default function VolumeDetail() {
   }
   const { title, description, cover, books, ordinal } = currentVolume;
 
-  // export default function tfsotr() {
-  //   const volume = volumes.find(
-  //     ({ slug }) => slug === "the-fellowship-of-the-ring"
-  //   );
   return (
     <>
       <Link href="/">← All Volumes</Link>
