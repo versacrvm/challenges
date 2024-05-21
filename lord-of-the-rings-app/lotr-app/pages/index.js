@@ -3,9 +3,15 @@ import { introduction } from "./lib/data.js";
 import Head from "next/head";
 import Link from "next/link";
 import { volumes } from "./lib/data.js";
+import { useRouter } from "next/router.js";
 
 export default function Volumes() {
   console.log({ volumes });
+  const router = useRouter();
+  function getRandomElement(array) {
+    const randomSlug = array[Math.floor(Math.random() * array.length)].slug;
+    router.push(`/volumes/${randomSlug}`);
+  }
   return (
     <>
       <Head>
@@ -22,6 +28,9 @@ export default function Volumes() {
             </li>
           ))}
         </ul>
+        <button type="button" onClick={() => getRandomElement(volumes)}>
+          Random Volume
+        </button>
       </main>
     </>
   );
